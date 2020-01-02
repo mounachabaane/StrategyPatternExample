@@ -1,6 +1,6 @@
 package com.paimentStrategyProject.strategy;
 
-public interface PaiementStrategy {
+public interface IPaiementStrategy {
 	public void payer(int montant);
 
 }

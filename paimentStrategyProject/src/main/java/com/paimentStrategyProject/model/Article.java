@@ -1,8 +1,15 @@
 package com.paimentStrategyProject.model;
 
-import com.paimentStrategyProject.strategy.PaiementStrategy;
+import com.paimentStrategyProject.strategy.IPaiementStrategy;
 
 public class Article {
+	
+	
+
+	public Article() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	private String nom;
 	private int prix;
@@ -20,7 +27,8 @@ public class Article {
 		return this.prix;
 	}
 
-	public void payer(PaiementStrategy methode) {
+	public void payer(IPaiementStrategy methode) {
+	
 		int montant = this.getPrix();
 		methode.payer(montant);
 	}
